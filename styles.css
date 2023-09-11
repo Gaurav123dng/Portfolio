@@ -14,9 +14,11 @@
 }
 
 #wrapper{
-    height:100vh;
-    overflow-y:auto;
-    overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .container{
@@ -75,15 +77,15 @@ a{
 }
 
 .hero-section{
-    position:relative;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 5rem;
-    margin: 4rem auto;
-    padding: 0 1rem;
-    padding-bottom: 8rem;
+  gap: 5rem;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  padding-bottom: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 1200px;
 }
 
 .faded-text{
@@ -176,6 +178,7 @@ a{
     filter:grayscale(1);
     transition:all 1s;
     animation: scaleImage 5s linear infinite;
+    
   }
 
   .user-image img{
@@ -183,26 +186,23 @@ a{
   }
 
   @keyframes scaleImage {
-
-    0%{
-        filter:grayscale(0);
-        transform:scale(1);
-        
+    0% {
+      scale: 1;
+      filter: grayscale(1);
     }
-
-    50%{
-        transform:scale(1.1);
-        filter:grayscale(1);
-        box-shadow: 3px 3px 10px black;
+  
+    50% {
+      filter: grayscale(0);
+      box-shadow: 3px 3px 10px black;
+      scale: 0.9;
     }
-
-    100%{
-        transform:scale(1);
-        filter:grayscale(0);
+  
+    100% {
+      scale: 1;
+      filter: grayscale(1);
     }
-    
   }
-
+  
 
   .icon-dots{
     z-index:9;
@@ -601,3 +601,66 @@ a{
 .skill-subHeading p{
   margin:15px 0;
 }
+
+/* 
+/*Your existing CSS rules */
+
+/* Add a media query for screens smaller than 768px (adjust this breakpoint as needed) 
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Change the navbar items to a column layout */
+   /* align-items: left; /* Center-align the items in the column */
+   /* padding: 1rem 0; /* Adjust padding as needed */
+  }
+  /*.logo-container {
+    order: -1; /* Move the logo to the top of the column */
+    margin-bottom: 1rem; /* Add some spacing between the logo and navigation on smaller screens */
+  }
+
+  .nav-items {
+    flex-direction:column; /* Change the navigation items to stack vertically */
+    text-align:center; /* Center-align the text */
+    gap: 1rem; /* Adjust the gap between items */
+  }
+
+  .nav-items div {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .logo-container {
+    margin-bottom: 1rem; /* Add some spacing between the logo and navigation on smaller screens */
+  }*/
+
+  /* You can add more specific styles as needed for smaller screens */
+} */
+/* Your existing CSS rules */
+
+/* Add a media query for screens smaller than 768px (adjust this breakpoint as needed) */
+/* Your existing CSS rules */
+
+/* Add a media query for screens smaller than 768px (adjust this breakpoint as needed) 
+  @media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Change the layout to a column on smaller screens */
+    align-items:center; /* Center-align the content vertically */
+    text-align: center; /* Center-align the text */
+  }
+
+  .hero-section-left {
+    order: 2; /* Move hero-section-left below hero-section-right */
+    margin-top: 2rem; /* Add some spacing between the sections */
+  }
+
+  .hero-section-right {
+    order: 1; /* Move hero-section-right above hero-section-left */
+  }
+
+  .user-image {
+    width: 80%; /* Adjust the width of the user image */
+    max-width: 400px; /* Set a maximum width for the user image */
+    margin-top: 2rem; /* Add some spacing between the user image and text */
+  }
+
+  /* You can add more specific styles as needed for smaller screens */
+}
+*/
